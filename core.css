@@ -1,0 +1,221 @@
+.ex-current-selected-input {
+    background-color: #ffffea !important;
+    outline: 5px solid #fff8da !important;
+    cursor: pointer !important;
+}
+
+#ex-container {
+    width: 400px;
+    position: fixed;
+    z-index: 999999;
+    top: 20px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 0 16px -1px rgba(0,0,0,0.46);
+    color: #000;
+}
+
+#ex-container-header {
+    height: 20px;
+    width: 100%;
+    cursor: -webkit-grab;
+    background: #e8e8e8;;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+#ex-container #ex-container-header {
+    z-index: 1000000;
+}
+
+#ex-container * {
+    position: relative;
+    box-sizing: border-box;
+}
+
+#ex-container label {
+    cursor: pointer;
+}
+
+#ex-container .add-new-button,
+#ex-container .cancel-new-button,
+#ex-container .save-new-button,
+#ex-container .choose-field-label,
+#ex-container .fill-form-button {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    line-height: 30px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#ex-container .add-new-button::before {
+    content: '\1f649';
+}
+
+#ex-container .add-new-labels,
+#ex-container .save-new-fields,
+#ex-container .fill-form {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#ex-container .add-new-labels div,
+#ex-container .save-new-fields div,
+#ex-container .cancel-new-labels div {
+    display: inline-block;
+}
+
+#ex-container .add-new-labels:hover {
+    background-color: #e7f2ea;
+}
+
+#ex-container .add-new-button-text,
+#ex-container .cancel-new-button-text {
+    font-size: 16px;
+}
+
+#ex-container .add-new-labels:hover .add-new-button-text::after {
+    content: '';
+}
+
+#ex-container #add-new,
+#ex-container .save-new-fields {
+    display: none;
+}
+
+#ex-container #add-new:checked ~ .add-new-form,
+#ex-container #add-new:checked ~ .save-new-fields,
+#ex-container #add-new:checked ~ .cancel-new-labels,
+#ex-container #add-new:checked ~ .choose-field {
+    display: block;
+}
+
+#ex-container #add-new:checked ~ .add-new-labels,
+#ex-container #add-new:checked ~ .fill-form {
+    display: none;
+}
+
+#ex-container .cancel-new-labels {
+    padding: 10px;
+    display: none;
+}
+
+#ex-container .cancel-new-button::before {
+    content: '\1f648';
+}
+
+#ex-container .cancel-new-labels:hover {
+    background-color: #f8e0dd;
+}
+
+#ex-container .add-new-form {
+    display: none;
+    padding: 10px;
+}
+
+#ex-container .field label {
+    display: block;
+    font-size: 12px;
+}
+
+#ex-container .field input {
+    padding: 5px;
+    border: 0;
+    background-color: #e8e8e8;
+    border-bottom: 2px solid transparent;
+    width: 100%;
+    margin: 3px 0 10px;
+    font-size: 16px;
+    outline: 0;
+    border-radius: 3px;
+}
+
+#ex-container .field input:disabled {
+    background-color: #919191;
+}
+
+#ex-container .ex-input-group {
+    counter-reset: section;
+    padding-left: 30px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+#ex-container .ex-input-group {
+    font-size: 0;
+}
+
+#ex-container .ex-input-group .field {
+    counter-increment: section;
+    width: calc(100% - 50px);
+    display: inline-block;
+}
+
+#ex-container .ex-input-group .field-remove {
+    width: 50px;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#ex-container .ex-input-group .field-remove::before {
+    content: '\274C';
+}
+
+#ex-container .ex-input-group .field::before {
+    content: '#' counter(section);
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+#ex-container .choose-field {
+    display: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#ex-container .choose-field:hover {
+    background-color: #fff7cd;
+}
+
+#ex-container .choose-field-label::before {
+    content: '\1F448';
+}
+
+#ex-container .choose-field-text,
+#ex-container .save-new-button-text,
+#ex-container .fill-form-button-text {
+    display: inline-block;
+    font-size: 16px;
+}
+
+#ex-container .save-new-button::before {
+    content: '\1F44C';
+}
+
+#ex-container .save-new-fields:hover {
+    background-color: #e7f2ea;
+}
+
+#ex-container .fill-form-button::before {
+    content: '\1F50F';
+}
+
+#ex-container .fill-form:hover {
+    background-color: #f2eddf;
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Your Saved Fields</title>
+    <script src="option.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        main {
+
+        }
+
+        .field {
+            font-size: 16px;
+            padding: 10px 10px;
+            border-top: 2px solid #e7e7e7;
+        }
+
+        .field:first-child {
+            border-top: 0;
+        }
+
+        .field:last-child {
+            border-bottom: 2px solid #e7e7e7;
+        }
+
+        .field > .remove-field {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 1;
+        }
+
+        .value-list {
+            max-width: 820px;
+            margin: auto;
+            font-size: 0;
+        }
+
+        .value {
+            font-size: 16px;
+            display: inline-block;
+            border-radius: 8px;
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: #e7e7e7;
+        }
+
+        .value > .remove-field {
+            margin-left: 5px;
+        }
+
+        .remove-field {
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .data {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .remove-field::before {
+            content: '\274C';
+        }
+
+        .url {
+            font-size: 0;
+            max-width: 820px;
+            margin: auto;
+        }
+
+        .url img {
+            width: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        .url a {
+            display: inline-block;
+            vertical-align: middle;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: calc(100% - 40px);
+        }
+
+        header {
+            padding: 10px;
+            background-color: #fff8da;
+        }
+
+        .wrapper {
+            max-width: 820px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .key {
+            font-size:48px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .key::before {
+            content: '\1F511';
+        }
+
+        .title {
+            font-size:24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="key"></div>
+            <div class="title">
+                Manage Your Saved Fields
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="field-list" class="field-list">
+        </div>
+    </main>
+</body>
+</html>
